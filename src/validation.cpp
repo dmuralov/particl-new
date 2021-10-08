@@ -1456,7 +1456,7 @@ void UpdateNumPeers(int num_peers)
     nPeers = num_peers;
 }
 
-int GetNumPeers()
+int GetNumPeers()                   
 {
     return nPeers;
 }
@@ -1542,6 +1542,7 @@ void UpdateNumBlocksOfPeers(NodeId id, int height) EXCLUSIVE_LOCKS_REQUIRED(cs_m
 
 int GetNumBlocksOfPeers()
 {
+    std::cout << "nPeerBlocks in GetNumBlocksOfPeers: " << nPeerBlocks << "\n";
     return nPeerBlocks;
 }
 

@@ -196,35 +196,35 @@ const std::pair<const char*, CAmount> regTestOutputs[] = {
 const size_t nGenesisOutputsRegtest = sizeof(regTestOutputs) / sizeof(regTestOutputs[0]);
 
 const std::pair<const char*, CAmount> genesisOutputs[] = {
-    std::make_pair("62a62c80e0b41f2857ba83eb438d5caa46e36bcb",7017084118),
-    std::make_pair("c515c636ae215ebba2a98af433a3fa6c74f84415",221897417980),
-    std::make_pair("711b5e1fd0b0f4cdf92cb53b00061ef742dda4fb",120499999),
-    std::make_pair("20c17c53337d80408e0b488b5af7781320a0a311",18074999),
-    std::make_pair("aba8c6f8dbcf4ecfb598e3c08e12321d884bfe0b",92637054909),
-    std::make_pair("1f3277a84a18f822171d720f0132f698bcc370ca",3100771006662),
-    std::make_pair("8fff14bea695ffa6c8754a3e7d518f8c53c3979a",465115650998),
-    std::make_pair("e54967b4067d91a777587c9f54ee36dd9f1947c4",669097504996),
-    std::make_pair("7744d2ac08f2e1d108b215935215a4e66d0262d2",802917005996),
-    std::make_pair("a55a17e86246ea21cb883c12c709476a09b4885c",267639001997),
-    std::make_pair("4e00dce8ab44fd4cafa34839edf8f68ba7839881",267639001997),
-    std::make_pair("702cae5d2537bfdd5673ac986f910d6adb23510a",254257051898),
-    std::make_pair("b19e494b0033c5608a7d153e57d7fdf3dfb51bb7",1204260290404),
-    std::make_pair("6909b0f1c94ea1979ed76e10a5a49ec795a8f498",1204270995964),
-    std::make_pair("05a06af3b29dade9f304244d934381ac495646c1",236896901156),
-    std::make_pair("557e2b3205719931e22853b27920d2ebd6147531",155127107700),
-    std::make_pair("ad16fb301bd21c60c5cb580b322aa2c61b6c5df2",115374999),
-    std::make_pair("182c5cfb9d17aa8d8ff78940135ca8d822022f32",17306249),
-    std::make_pair("b8a374a75f6d44a0bd1bf052da014efe564ae412",133819500998),
-    std::make_pair("fadee7e2878172dad55068c8696621b1788dccb3",133713917412),
-    std::make_pair("eacc4b108c28ed73b111ff149909aacffd2cdf78",173382671567),
-    std::make_pair("dd87cc0b8e0fc119061f33f161104ce691d23657",245040727620),
-    std::make_pair("1c8b0435eda1d489e9f0a16d3b9d65182f885377",200226012806),
-    std::make_pair("15a724f2bc643041cb35c9475cd67b897d62ca52",436119839355),
-    std::make_pair("626f86e9033026be7afbb2b9dbe4972ef4b3e085",156118097804),
-    std::make_pair("a4a73d99269639541cb7e845a4c6ef3e3911fcd6",108968353176),
-    std::make_pair("27929b31f11471aa4b77ca74bb66409ff76d24a2",126271503135),
-    std::make_pair("2d6248888c7f72cc88e4883e4afd1025c43a7f0e",35102718156),
-    std::make_pair("25d8debc253f5c3f70010f41c53348ed156e7baa",80306152234),
+    std::make_pair("62a62c80e0b41f2857ba83eb438d5caa46e36bcb", 7017084118),
+    std::make_pair("c515c636ae215ebba2a98af433a3fa6c74f84415", 221897417980),
+    std::make_pair("711b5e1fd0b0f4cdf92cb53b00061ef742dda4fb", 120499999),
+    std::make_pair("20c17c53337d80408e0b488b5af7781320a0a311", 18074999),
+    std::make_pair("aba8c6f8dbcf4ecfb598e3c08e12321d884bfe0b", 92637054909),
+    std::make_pair("1f3277a84a18f822171d720f0132f698bcc370ca", 3100771006662),
+    std::make_pair("8fff14bea695ffa6c8754a3e7d518f8c53c3979a", 465115650998),
+    std::make_pair("e54967b4067d91a777587c9f54ee36dd9f1947c4", 669097504996),
+    std::make_pair("7744d2ac08f2e1d108b215935215a4e66d0262d2", 802917005996),
+    std::make_pair("a55a17e86246ea21cb883c12c709476a09b4885c", 267639001997),
+    std::make_pair("4e00dce8ab44fd4cafa34839edf8f68ba7839881", 267639001997),
+    std::make_pair("702cae5d2537bfdd5673ac986f910d6adb23510a", 254257051898),
+    std::make_pair("b19e494b0033c5608a7d153e57d7fdf3dfb51bb7", 1204260290404),
+    std::make_pair("2d31a2bf66a4e4747ad52f02bd8d8afad734493b", 1204270995964), // Pc3k1TwSEuZmwKEaSUwPFsYsiMTVx2WSA1 [change] 6909b0f1c94ea1979ed76e10a5a49ec795a8f498
+    std::make_pair("05a06af3b29dade9f304244d934381ac495646c1", 236896901156),
+    std::make_pair("557e2b3205719931e22853b27920d2ebd6147531", 155127107700),
+    std::make_pair("ad16fb301bd21c60c5cb580b322aa2c61b6c5df2", 115374999),
+    std::make_pair("182c5cfb9d17aa8d8ff78940135ca8d822022f32", 17306249),
+    std::make_pair("b8a374a75f6d44a0bd1bf052da014efe564ae412", 133819500998),
+    std::make_pair("fadee7e2878172dad55068c8696621b1788dccb3", 133713917412),
+    std::make_pair("eacc4b108c28ed73b111ff149909aacffd2cdf78", 173382671567),
+    std::make_pair("dd87cc0b8e0fc119061f33f161104ce691d23657", 245040727620),
+    std::make_pair("1c8b0435eda1d489e9f0a16d3b9d65182f885377", 200226012806),
+    std::make_pair("15a724f2bc643041cb35c9475cd67b897d62ca52", 436119839355),
+    std::make_pair("626f86e9033026be7afbb2b9dbe4972ef4b3e085", 156118097804),
+    std::make_pair("a4a73d99269639541cb7e845a4c6ef3e3911fcd6", 108968353176),
+    std::make_pair("27929b31f11471aa4b77ca74bb66409ff76d24a2", 126271503135),
+    std::make_pair("2d6248888c7f72cc88e4883e4afd1025c43a7f0e", 35102718156),
+    std::make_pair("25d8debc253f5c3f70010f41c53348ed156e7baa", 80306152234),
 };
 const size_t nGenesisOutputs = sizeof(genesisOutputs) / sizeof(genesisOutputs[0]);
 
@@ -483,7 +483,7 @@ public:
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000d18378c543c764b48d");
-        consensus.defaultAssumeValid = uint256S("0xdcbe7be05060974cca33a52790e047a73358812102a97cd5b3089f2469bd6601"); // 1026710
+        consensus.defaultAssumeValid = uint256S("0x0000ac64cd5542fc9238f33e53716aef636275809319b531c305562d261961dc"); // 1026710
 
         consensus.nMinRCTOutputDepth = 12;
 
@@ -511,22 +511,65 @@ public:
         m_assumed_blockchain_size = 1;
         m_assumed_chain_state_size = 1;
 
-        genesis = CreateGenesisBlockMainNet(1500296400, 31429, 0x1f00ffff); // 2017-07-17 13:00:00
+        genesis = CreateGenesisBlockMainNet(1500296400, 107035, 0x1f00ffff); // 2017-07-17 13:00:00
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        assert(consensus.hashGenesisBlock == uint256S("0x0000ee0784c195317ac95623e22fddb8c7b8825dc3998e0bb924d66866eccf4c"));
-        assert(genesis.hashMerkleRoot == uint256S("0xc95fb023cf4bc02ddfed1a59e2b2f53edd1a726683209e2780332edf554f1e3e"));
-        assert(genesis.hashWitnessMerkleRoot == uint256S("0x619e94a7f9f04c8a1d018eb8bcd9c42d3c23171ebed8f351872256e36959d66c"));
+        // calculate Genesis Block
+        // Reset genesis
+        // consensus.hashGenesisBlock = uint256S("0x");
+        // std::cout << std::string("Begin calculating Mainnet Genesis Block:\n");
+        // if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
+        //     std::cout << std::string("Calculating Mainnet Genesis Block:\n");
+        //     arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
+        //     uint256 hash;
+        //     genesis.nNonce = 0;
+        //     // This will figure out a valid hash and Nonce if you're
+        //     // creating a different genesis block:
+        //     // uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+        //     // hashTarget.SetCompact(genesis.nBits, &fNegative, &fOverflow).getuint256();
+        //     // while (genesis.GetHash() > hashTarget)
+        //     std::cout  << "HashTarget: " << hashTarget.ToString() << "\n";
+        //     while (UintToArith256(genesis.GetHash()) > hashTarget)
+        //     {
+        //         ++genesis.nNonce;
+        //         if (genesis.nNonce == 0)
+        //         {
+        //             std::cout << std::string("NONCE WRAPPED, incrementing time");
+        //             std::cout << std::string("NONCE WRAPPED, incrementing time:\n");
+        //             ++genesis.nTime;
+        //         }
+        //         if (genesis.nNonce % 10000 == 0)
+        //         {
+        //             std::cout << std::string("Mainnet: nonce ");
+        //             std::cout << genesis.nNonce;
+        //             std::cout << std::string(", hash = ");
+        //             std::cout << genesis.GetHash().ToString().c_str();
+        //             std::cout << std::string("\n");
+        //             // std::cout << strNetworkID << " nonce: " << genesis.nNonce << " time: " << genesis.nTime << " hash: " << genesis.GetHash().ToString().c_str() << "\n";
+        //         }
+        //     }
+        //     std::cout << "Mainnet ---\n";
+        //     std::cout << "   nonce: " << genesis.nNonce <<  "\n";
+        //     std::cout << "   time: " << genesis.nTime << "\n";
+        //     std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
+        //     std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
+        //     std::cout << "   witnessmerklehash: " << genesis.hashWitnessMerkleRoot.ToString().c_str() << "\n";
+        // }
+        // std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
+
+        assert(consensus.hashGenesisBlock == uint256S("0x0000ac64cd5542fc9238f33e53716aef636275809319b531c305562d261961dc"));
+        assert(genesis.hashMerkleRoot == uint256S("0x95a8a5cb9c041802e2bd942dafa398fd21061937f32474f58a4181736cada248"));
+        assert(genesis.hashWitnessMerkleRoot == uint256S("0x688ebfde3746aaee899098291d494dd39c5074fda31307f8ce706f70646ddc62"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("mainnet-seed.particl.io");
-        vSeeds.emplace_back("dnsseed-mainnet.particl.io");
-        vSeeds.emplace_back("mainnet.particl.io");
-        vSeeds.emplace_back("dnsseed.tecnovert.net");
+        // vSeeds.emplace_back("mainnet-seed.particl.io");
+        // vSeeds.emplace_back("dnsseed-mainnet.particl.io");
+        // vSeeds.emplace_back("mainnet.particl.io");
+        // vSeeds.emplace_back("dnsseed.tecnovert.net");
 
 
         vTreasuryFundSettings.emplace_back(0,
@@ -572,31 +615,30 @@ public:
 
         checkpointData = {
             {
-                { 5000,     uint256S("0xe786020ab94bc5461a07d744f3631a811b4ebf424fceda12274f2321883713f4")},
-                { 15000,    uint256S("0xafc73ac299f2e6dd309077d230fccef547b9fc24379c1bf324dd3683b13c61c3")},
-                { 30000,    uint256S("0x35d95c12799323d7b418fd64df9d88ef67ef27f057d54033b5b2f38a5ecaacbf")},
-                { 91000,    uint256S("0x4d1ffaa5b51431918a0c74345e2672035c743511359ac8b1be67467b02ff884c")},
-                { 112250,   uint256S("0x89e4b23471aea7a875df835d6f89613fd87ba649e7a1d8cb892917d0080ef337")},
-                { 213800,   uint256S("0xfd6c0e5f7444a9e09a5fa1652db73d5b8628aeabe162529a5356be700509aa80")},
-                { 303640,   uint256S("0x7cc035d7888ee6d824cec8ff01a6287a71873d874f72a5fd3706d227b88f8e99")},
-                { 443228,   uint256S("0x1e2ae3edb2fa5b398c2f719d2bbb44b3089fb96170b6676c0c963f12bceba489")},
-                { 583322,   uint256S("0x2be0224e40ddf4763f61ff6db088806f3ad5c6530ea7a6801b067ecbbd13fec9")},
-                { 634566,   uint256S("0xc330a61e218b06d3d567c459b54e83ab682a366fc00b77d69dd78c6ed9655a2e")},
-                { 777625,   uint256S("0x75b2b1412610c1ff54e49fc38222f3f45fe934b0e485ccae7b5d461b94510734")},
-                { 856749,   uint256S("0x6b705dbf87345594314152841212a532753f11ec711ac81afc64f31eb048df19")},
-                { 887180,   uint256S("0xf9f1e91f82e73d4781052e42c8b814b8265e0929d4c16284db3feb354bfc317c")},
-                { 962370,   uint256S("0x43c3d5568f3b3467e5142f86445d5b12b923e3e5c4a1e6566d90a7fad807799c")},
-                { 992790,   uint256S("0xea97054e60558199d5c94627116fbfa9f3be1c63d45510963d1a308fe152974b")},
-                { 1026710,  uint256S("0xdcbe7be05060974cca33a52790e047a73358812102a97cd5b3089f2469bd6601")},
-            }
-        };
+                {0, uint256S("0x0000ac64cd5542fc9238f33e53716aef636275809319b531c305562d261961dc")},
+                // {15000, uint256S("0xafc73ac299f2e6dd309077d230fccef547b9fc24379c1bf324dd3683b13c61c3")},
+                // {30000, uint256S("0x35d95c12799323d7b418fd64df9d88ef67ef27f057d54033b5b2f38a5ecaacbf")},
+                // {91000, uint256S("0x4d1ffaa5b51431918a0c74345e2672035c743511359ac8b1be67467b02ff884c")},
+                // {112250, uint256S("0x89e4b23471aea7a875df835d6f89613fd87ba649e7a1d8cb892917d0080ef337")},
+                // {213800, uint256S("0xfd6c0e5f7444a9e09a5fa1652db73d5b8628aeabe162529a5356be700509aa80")},
+                // {303640, uint256S("0x7cc035d7888ee6d824cec8ff01a6287a71873d874f72a5fd3706d227b88f8e99")},
+                // {443228, uint256S("0x1e2ae3edb2fa5b398c2f719d2bbb44b3089fb96170b6676c0c963f12bceba489")},
+                // {583322, uint256S("0x2be0224e40ddf4763f61ff6db088806f3ad5c6530ea7a6801b067ecbbd13fec9")},
+                // {634566, uint256S("0xc330a61e218b06d3d567c459b54e83ab682a366fc00b77d69dd78c6ed9655a2e")},
+                // {777625, uint256S("0x75b2b1412610c1ff54e49fc38222f3f45fe934b0e485ccae7b5d461b94510734")},
+                // {856749, uint256S("0x6b705dbf87345594314152841212a532753f11ec711ac81afc64f31eb048df19")},
+                // {887180, uint256S("0xf9f1e91f82e73d4781052e42c8b814b8265e0929d4c16284db3feb354bfc317c")},
+                // {962370, uint256S("0x43c3d5568f3b3467e5142f86445d5b12b923e3e5c4a1e6566d90a7fad807799c")},
+                // {992790, uint256S("0xea97054e60558199d5c94627116fbfa9f3be1c63d45510963d1a308fe152974b")},
+                // {1026710, uint256S("0xdcbe7be05060974cca33a52790e047a73358812102a97cd5b3089f2469bd6601")},
+            }};
 
-        chainTxData = ChainTxData {
-            // Data from rpc: getchaintxstats 4096 dcbe7be05060974cca33a52790e047a73358812102a97cd5b3089f2469bd6601
-            /* nTime    */ 1632606640,
-            /* nTxCount */ 1212654,
-            /* dTxRate  */ 0.008
-        };
+        // chainTxData = ChainTxData {
+        //     // Data from rpc: getchaintxstats 4096 dcbe7be05060974cca33a52790e047a73358812102a97cd5b3089f2469bd6601
+        //     /* nTime    */ 1632606640,
+        //     /* nTxCount */ 1212654,
+        //     /* dTxRate  */ 0.008
+        // };
     }
 
     void SetOld()

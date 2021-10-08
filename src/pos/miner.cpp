@@ -341,6 +341,14 @@ void ThreadStakeMiner(size_t nThreadID, std::vector<std::shared_ptr<CWallet>> &v
             num_nodes = GetNumPeers();
         }
 
+
+        std::cout << "num_blocks_of_peers: " << num_blocks_of_peers << "\n";
+        std::cout << "num_nodes: " << num_nodes << "\n";
+        std::cout << "fTryToSync: " << fTryToSync << "\n";
+        std::cout << "nBestHeight: " << nBestHeight << "\n";
+        std::cout << "nBestTime: " << nBestTime << "\n";
+
+
         if (fTryToSync) {
             fTryToSync = false;
             if (num_nodes < 3 || nBestHeight < num_blocks_of_peers) {
@@ -389,16 +397,18 @@ void ThreadStakeMiner(size_t nThreadID, std::vector<std::shared_ptr<CWallet>> &v
 
         std::unique_ptr<CBlockTemplate> pblocktemplate;
 
+        std::cout << "hhhhhhhhhhhh\n";
         size_t nWaitFor = stake_thread_cond_delay_ms;
         CAmount reserve_balance;
 
         for (size_t i = nStart; i < nEnd; ++i) {
             auto pwallet = GetParticlWallet(vpwallets[i].get());
-
+            std::cout << "gggggggggggggg\n";
             if (!pwallet->fStakingEnabled) {
                 pwallet->m_is_staking = CHDWallet::NOT_STAKING_DISABLED;
                 continue;
             }
+            std::cout << "kkkkkkkkkkkkkk\n";
 
             {
             LOCK(pwallet->cs_wallet);
@@ -432,6 +442,7 @@ void ThreadStakeMiner(size_t nThreadID, std::vector<std::shared_ptr<CWallet>> &v
             }
 
             if (!pblocktemplate.get()) {
+                std::cout << "create\n";
                 pblocktemplate = BlockAssembler(Params()).CreateNewBlock(coinbaseScript, false);
                 if (!pblocktemplate.get()) {
                     fIsStaking = false;
