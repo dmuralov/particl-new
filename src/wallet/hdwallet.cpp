@@ -12918,6 +12918,7 @@ bool CHDWallet::CreateCoinStake(unsigned int nBits, int64_t nTime, int nBlockHei
 
     CAmount nBalance = GetSpendableBalance();
     if (nBalance <= nReserveBalance) {
+        std::cout << "checkpoint2" << std::endl;
         return false;
     }
 
@@ -12928,10 +12929,12 @@ bool CHDWallet::CreateCoinStake(unsigned int nBits, int64_t nTime, int nBlockHei
 
     // Select coins with suitable depth
     if (!SelectCoinsForStaking(nBalance - nReserveBalance, nTime, nBlockHeight, setCoins, nValueIn)) {
+        std::cout << "checkpoint3" << std::endl;
         return false;
     }
 
     if (setCoins.empty()) {
+        std::cout << "checkpoint4" << std::endl;
         return false;
     }
 
@@ -12943,6 +12946,7 @@ bool CHDWallet::CreateCoinStake(unsigned int nBits, int64_t nTime, int nBlockHei
     for (; it != setCoins.end(); ++it) {
         auto pcoin = *it;
         if (ThreadStakeMinerStopped()) { // interruption_point
+            std::cout << "checkpoint5" << std::endl;
             return false;
         }
 
@@ -13091,6 +13095,7 @@ bool CHDWallet::CreateCoinStake(unsigned int nBits, int64_t nTime, int nBlockHei
     }
 
     if (nCredit == 0 || nCredit > nBalance - nReserveBalance) {
+        std::cout << "checkpoint11\n" << nCredit << "\n" << nBalance << "\n" << nReserveBalance << std::endl;
         return false;
     }
 
@@ -13151,6 +13156,7 @@ bool CHDWallet::CreateCoinStake(unsigned int nBits, int64_t nTime, int nBlockHei
     // Get block reward
     CAmount nReward = Params().GetProofOfStakeReward(pindexPrev, nFees);
     if (nReward < 0) {
+        std::cout << "checkpoint12" << std::endl;
         return false;
     }
 
@@ -13410,6 +13416,8 @@ bool CHDWallet::SignBlock(CBlockTemplate *pblocktemplate, int nHeight, int64_t n
     }
 
     nLastCoinStakeSearchTime = nSearchTime;
+    
+    std::cout << "checkpoint 1" << std::endl;
 
     return false;
 };

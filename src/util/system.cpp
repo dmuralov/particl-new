@@ -975,12 +975,17 @@ const fs::path &GetBlocksDir()
 
 const fs::path &GetDataDir(bool fNetSpecific)
 {
+    //std::cout << "checkpoint4\n";
     LOCK(csPathCached);
     fs::path &path = fNetSpecific ? pathCachedNetSpecific : pathCached;
+
+    //std::cout << "path: " << path << "\n";
 
     // Cache the path to avoid calling fs::create_directories on every call of
     // this function
     if (!path.empty()) return path;
+
+    //std::cout << "checkpoint1\n";
 
     std::string datadir = gArgs.GetArg("-datadir", "");
     if (!datadir.empty()) {
@@ -992,6 +997,7 @@ const fs::path &GetDataDir(bool fNetSpecific)
     } else {
         path = GetDefaultDataDir();
     }
+    //std::cout << "checkpoint2\n";
     if (fNetSpecific)
         path /= BaseParams().DataDir();
 

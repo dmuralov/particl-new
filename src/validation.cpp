@@ -1596,26 +1596,32 @@ bool CChainState::IsInitialBlockDownload() const
     // Optimization: pre-test latch before taking the lock.
     if (m_cached_finished_ibd.load(std::memory_order_relaxed))
         return false;
-
+    //std::cout << "checkpoint1\n";
     LOCK(cs_main);
     if (m_cached_finished_ibd.load(std::memory_order_relaxed))
         return false;
+    //std::cout << "checkpoint2\n";
     if (fImporting || fReindex)
         return true;
+    //std::cout << "checkpoint3\n";
     if (m_chain.Tip() == nullptr)
         return true;
+    //std::cout << "checkpoint4\n";
     if (m_chain.Tip()->nChainWork < nMinimumChainWork)
         return true;
+    //std::cout << "checkpoint5\n";
     if (m_chain.Tip()->nHeight > COINBASE_MATURITY
         && m_chain.Tip()->GetBlockTime() < (GetTime() - nMaxTipAge))
         return true;
+    ///std::cout << "checkpoint6\n";
     if (fParticlMode
         && (GetNumPeers() < 1
             || m_chain.Tip()->nHeight < GetNumBlocksOfPeers()-10))
         return true;
-
+    //std::cout << "checkpoint7\n";
     LogPrintf("Leaving InitialBlockDownload (latching to false)\n");
     m_cached_finished_ibd.store(true, std::memory_order_relaxed);
+    //std::cout << "checkpoint8\n";
     return false;
 }
 

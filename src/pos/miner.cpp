@@ -137,12 +137,14 @@ bool ImportOutputs(CBlockTemplate *pblocktemplate, int nHeight)
         return error("%s: Malformed block.", __func__);
     }
 
+    //std::cout << "checkpoint89\n";
+
     fs::path fPath = GetDataDir() / "genesisOutputs.txt";
     if (!fs::exists(fPath)) {
         return error("%s: File not found 'genesisOutputs.txt'.", __func__);
     }
 
-    const int nMaxOutputsPerTxn = 80;
+    const int nMaxOutputsPerTxn = 5; // [change] 80
     FILE *fp;
     errno = 0;
     if (!(fp = fopen(fPath.string().c_str(), "rb"))) {
@@ -342,11 +344,11 @@ void ThreadStakeMiner(size_t nThreadID, std::vector<std::shared_ptr<CWallet>> &v
         }
 
 
-        std::cout << "num_blocks_of_peers: " << num_blocks_of_peers << "\n";
-        std::cout << "num_nodes: " << num_nodes << "\n";
-        std::cout << "fTryToSync: " << fTryToSync << "\n";
-        std::cout << "nBestHeight: " << nBestHeight << "\n";
-        std::cout << "nBestTime: " << nBestTime << "\n";
+        // std::cout << "num_blocks_of_peers: " << num_blocks_of_peers << "\n";
+        // std::cout << "num_nodes: " << num_nodes << "\n";
+        // std::cout << "fTryToSync: " << fTryToSync << "\n";
+        // std::cout << "nBestHeight: " << nBestHeight << "\n";
+        // std::cout << "nBestTime: " << nBestTime << "\n";
 
 
         if (fTryToSync) {
@@ -359,7 +361,7 @@ void ThreadStakeMiner(size_t nThreadID, std::vector<std::shared_ptr<CWallet>> &v
             }
         }
 
-        if (num_nodes == 0 || ::ChainstateActive().IsInitialBlockDownload()) {
+        if (num_nodes == 0 || ::ChainstateActive().IsInitialBlockDownload()) { // (num_nodes == 0 || ::ChainstateActive().IsInitialBlockDownload())
             fIsStaking = false;
             fTryToSync = true;
             LogPrint(BCLog::POS, "%s: IsInitialBlockDownload\n", __func__);
@@ -397,18 +399,18 @@ void ThreadStakeMiner(size_t nThreadID, std::vector<std::shared_ptr<CWallet>> &v
 
         std::unique_ptr<CBlockTemplate> pblocktemplate;
 
-        std::cout << "hhhhhhhhhhhh\n";
+        //std::cout << "hhhhhhhhhhhh\n";
         size_t nWaitFor = stake_thread_cond_delay_ms;
         CAmount reserve_balance;
 
         for (size_t i = nStart; i < nEnd; ++i) {
             auto pwallet = GetParticlWallet(vpwallets[i].get());
-            std::cout << "gggggggggggggg\n";
+            //std::cout << "gggggggggggggg\n";
             if (!pwallet->fStakingEnabled) {
                 pwallet->m_is_staking = CHDWallet::NOT_STAKING_DISABLED;
                 continue;
             }
-            std::cout << "kkkkkkkkkkkkkk\n";
+            //std::cout << "kkkkkkkkkkkkkk\n";
 
             {
             LOCK(pwallet->cs_wallet);
@@ -442,7 +444,7 @@ void ThreadStakeMiner(size_t nThreadID, std::vector<std::shared_ptr<CWallet>> &v
             }
 
             if (!pblocktemplate.get()) {
-                std::cout << "create\n";
+                //std::cout << "create" << std::endl;
                 pblocktemplate = BlockAssembler(Params()).CreateNewBlock(coinbaseScript, false);
                 if (!pblocktemplate.get()) {
                     fIsStaking = false;
@@ -451,6 +453,8 @@ void ThreadStakeMiner(size_t nThreadID, std::vector<std::shared_ptr<CWallet>> &v
                     continue;
                 }
 
+                //std::cout << "checkpoint567\n";
+                
                 if (nBestHeight + 1 <= nLastImportHeight
                     && !ImportOutputs(pblocktemplate.get(), nBestHeight + 1)) {
                     fIsStaking = false;
